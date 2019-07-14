@@ -1,4 +1,11 @@
 .container{
+    background-color: red;
+    width: 100%;
+    position: relative;
+}
+
+.jumbotron{
+    margin-bottom: 0;
 }
 
 .summon-container  {
