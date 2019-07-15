@@ -2,6 +2,14 @@
     margin-bottom: 0;
 }
 
+.vertical-center{
+    display: flex;
+    align-items: center;
+}
+
+.h1{
+    align-content: center;
+}
 .summon-container  {
     background-color: rgb(90, 108, 131);
     display: flex;
