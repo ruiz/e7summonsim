@@ -1,24 +1,38 @@
 .jumbotron{
+    padding: 10px;
     margin-bottom: 0;
+    border-radius: 0;
 }
-
-.vertical-center{
-    display: flex;
-    align-items: center;
+.color-paleB{
+    background: #93a8ac;
 }
-
-.h1{
-    align-content: center;
-}
-.summon-container  {
+.container  {
+    display: fixed;
+    padding: 10px;
     background-color: rgb(90, 108, 131);
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    flex-direction: column;
     height: 70vh;
-    padding-bottom: 30px;
+    opacity: .8;
 }
 
-.btn-primary{
-    bottom: 100px;
+.sidebar {
+    height:100%;
+    width:200px;
+    z-index:1;
+    overflow:auto;
+}
+
+
+section{
+    height: 100vh;
+    padding-top: 10vh;
+    background-image: url(bg.jpg);
+    animation: banner-scroll 60s ease-in-out infinite;
+    transition: all .2s ease;     
+}
+
+@keyframes banner-scroll {
+    0% { background-position-y: 10%; }
+    50% { background-position-y: 90%; }
+    100% { background-position-y: 10%; }
 }
