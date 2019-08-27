@@ -7,16 +7,28 @@
     background: #93a8ac;
 }
 .container  {
-    display: fixed;
+    display: flex;
     padding: 10px;
     background-color: rgb(90, 108, 131);
     flex-direction: column;
-    height: 70vh;
+    min-height: 70vh;
     opacity: .8;
 }
+#summonCategories{
+    display: flex;
+    height: 70vh;
+    width: auto;
+    flex-direction: row;
+    justify-content: flex-start;
+    background-color: green;
+}
 
+.summonResults{
+    background-color: red;
+    width: 100%;
+}
 .sidebar {
-    height:100%;
+    height:70vh;
     width:200px;
     z-index:1;
     overflow:auto;
@@ -25,7 +37,7 @@
 
 section{
     height: 100vh;
-    padding-top: 10vh;
+    padding-top: 5vh;
     background-image: url(bg.jpg);
     animation: banner-scroll 60s ease-in-out infinite;
     transition: all .2s ease;     
