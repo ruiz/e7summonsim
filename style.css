@@ -1,20 +1,36 @@
+/*colors, bg, icons*/
+:root{
+    --color-someBlue: rgb(47, 47, 162);
+    --color-someGrey: rgb(90, 108, 131);
+    --color-paleGrey: rgb(169, 169, 169);
+
+    --bg-landing: url(assets/bg.jpg);
+    --bg-paleBlue: url(assets/e7logo.png);
+}
+
+.w3-red,
+.w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
+
+/*div class*/
 .jumbotron{
-    background-image: url(assets/e7logo.png);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: -250px 0px;
+    background-image: var(--bg-paleBlue);
     padding: 10px;
     height: 100px;
     margin-bottom: 0;
     border-radius: 0;
 }
-.color-paleB{
-    background-image: url(assets/e7logo.png)
+.highLight,
+.highLight-hover:hover{
+    color: #fff !important;
+    background-color: var(--color-someBlue)!important;
 }
 .container  {
     display: flex;
     padding: 10px;
-    background-color: rgb(90, 108, 131);
+    background-color: var(--color-someGrey);
     flex-direction: column;
     min-height: 70vh;
     min-width:70vw;
@@ -25,11 +41,11 @@
     height: 70vh;
     flex-direction: row;
     justify-content: flex-start;
-    background-color: green;
+    background-color: var(--color-paleGrey);
 }
 
 .summonResults{
-    background-color: green;
+    background-color: var(--color-paleGrey);
     padding: 30px;
     overflow: none;
 }
@@ -39,13 +55,14 @@
     width:150px;
     z-index:1;
     overflow:auto;
+    background-image: var(--bg-paleBlue);
 }
 
 
 section{
     height: 100vh;
     padding-top: 5vh;
-    background-image: url(assets/bg.jpg);
+    background-image: var(--bg-landing);
     animation: banner-scroll 60s ease-in-out infinite;
     transition: all .2s ease;     
 }
