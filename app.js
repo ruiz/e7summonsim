@@ -1,17 +1,22 @@
-function summonGach(){
-    console.log("test");
-}
+const dbAPI = "https://epicsevendb-apiserver.herokuapp.com/api/";
+const dbURL = "https://epicsevendb.com/";
+const assetsURL = "https://assets.epicsevendb.com/";
+const randomURL = "https://www.random.org/";
 
-function getSummonInfo(evt, summonType){
-    var i, x, tablinks;
-    x = document.getElementsByClassName("summon");
-    for(i=0; i<x.length; i++){
-        x[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tablink");
-    for(i=0; i<x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" highLight","");
-    }
-    document.getElementById(summonType).style.display = "block";
-    evt.currentTarget.className += " highLight";
-}
+var assetCache
+
+$('.banner-item').click(function(){
+    var test = $(this).attr("class");
+});
+
+
+//highlighting selected tab
+$('.tablink').click(function(){
+    $(".tablink").removeClass("highlight");
+    $(".summon-results").removeClass("menu-active").addClass("menu-hide");
+    
+    $(this).addClass("highlight");  
+    
+    var current =  $(this).attr("data-menu");
+    $('#'+current).removeClass("menu-hide").addClass("menu-active");
+});

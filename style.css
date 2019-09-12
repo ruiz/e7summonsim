@@ -11,6 +11,14 @@
 .w3-red,
 .w3-hover-red:hover{color:#fff!important;background-color:#f44336!important}
 
+.menu-hide{
+    display: none;
+}
+
+.menu-active{
+    display: block;
+}
+
 /*div class*/
 .jumbotron{
     background-size: contain;
@@ -22,11 +30,12 @@
     margin-bottom: 0;
     border-radius: 0;
 }
-.highLight,
-.highLight-hover:hover{
+.highlight,
+.highlight-hover:hover{
     color: #fff !important;
     background-color: var(--color-someBlue)!important;
 }
+
 .container  {
     display: flex;
     padding: 10px;
@@ -36,7 +45,7 @@
     min-width:70vw;
     opacity: .7;
 }
-#summonCategories{
+#summon-categories{
     display: flex;
     height: 70vh;
     flex-direction: row;
@@ -44,7 +53,7 @@
     background-color: var(--color-paleGrey);
 }
 
-.summonResults{
+.summon-results{
     background-color: var(--color-paleGrey);
     padding: 30px;
     overflow: none;

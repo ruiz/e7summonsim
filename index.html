@@ -15,32 +15,28 @@
                 <div class="jumbotron">
                     <h1></h1>
                 </div>
-                <div id="summonCategories">
+                <div id="summon-categories">
                     <div class="sidebar w3-bar-block color-paleB">
-                        <button class="w3-bar-item w3-button tablink" onclick="getSummonInfo(event, 'About')">About</button>
-                        <button class="w3-bar-item w3-button tablink" onclick="getSummonInfo(event, 'Covenant')">Covenant</button>
-                        <button class="w3-bar-item w3-button tablink" onclick="getSummonInfo(event, 'Mystic')">Mystic</button>
-                        <button class="w3-bar-item w3-button tablink" onclick="getSummonInfo(event, 'Moonlight')">Moonlight</button>  
+                        <button class="w3-bar-item w3-button tablink banner-item highlight" data-menu="covenant">Covenant</button>
+                        <button class="w3-bar-item w3-button tablink banner-item" data-menu="rate-up">Rate up</button>
+                        <button class="w3-bar-item w3-button tablink banner-item" data-menu="mystic">Mystic</button>
+                        <button class="w3-bar-item w3-button tablink banner-item" data-menu="moonlight">Moonlight</button>  
+                        <button class="w3-bar-item w3-button tablink about-info" data-menu="about">About</button>
                     </div>
-                    <div id="Covenant" class="summonResults summon" style="display: none">
-                        
+                    <div id="summon-grid" class="summon-results menu-hide">
                     </div>
-                    <div id="Mystic" class="summonResults summon" style="display: none">
-                        
-                    </div>
-                    <div id="Moonlight" class="summonResults summon" style="display: none">
-                        
-                    </div>
-                    <div id="About" class="summonResults summon" style="display: block">
+                    <div id="about" class="summon-results menu-active">
                         <h2>About</h2>
                         <h4>Epic Seven Simulator by Zack</h4>
                         <h4>Assets and data from <a class="link" href="https://epicsevendb.com" target="_blank">EpicSevenDB.com</a></h4>
                     </div>
                 </div>
             </div>
-            <script src="app.js"></script>
-            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            
+            <script src="app.js"></script>
         </section>
     </body>
 </html>
