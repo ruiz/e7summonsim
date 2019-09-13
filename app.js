@@ -5,18 +5,27 @@ const randomURL = "https://www.random.org/";
 
 var assetCache
 
-$('.banner-item').click(function(){
+var $summon_grid = $(".summon-grid").isotope({
+
+});
+
+$(".banner-item").click(function(){
     var test = $(this).attr("class");
 });
 
-
 //highlighting selected tab
-$('.tablink').click(function(){
+$(".tablink").click(function(){
     $(".tablink").removeClass("highlight");
-    $(".summon-results").removeClass("menu-active").addClass("menu-hide");
+    $(".menu-active").removeClass("menu-active").addClass("menu-hide");
     
-    $(this).addClass("highlight");  
-    
-    var current =  $(this).attr("data-menu");
-    $('#'+current).removeClass("menu-hide").addClass("menu-active");
+    $(this).addClass("highlight");
+    if($(this).hasClass("banner-item")){
+        $("#summon").removeClass("menu-hide").addClass("menu-active");
+    }
+    else{
+        $("#about").removeClass("menu-hide").addClass("menu-active");
+    }
+       
+    /*var current =  $(this).attr("data-menu");
+    $('#'+current).removeClass("menu-hide").addClass("menu-active");*/
 });

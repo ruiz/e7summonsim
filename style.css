@@ -1,11 +1,14 @@
 /*colors, bg, icons*/
 :root{
-    --color-someBlue: rgb(47, 47, 162);
-    --color-someGrey: rgb(90, 108, 131);
-    --color-paleGrey: rgb(169, 169, 169);
-
+    --color-blue: rgb(47, 47, 162);
+    --color-white: #fff;
+    --color-border-grey: rgb(90, 108, 131);
+    --color-body-grey: rgb(169, 169, 169);
+    --color-light-grey: #F6F6F6;
+    --color-summon-blue: #1089ff;
+    --color-summon-highlight: #23374d;
     --bg-landing: url(assets/bg.jpg);
-    --bg-paleBlue: url(assets/e7logo.png);
+    --bg-title: url(assets/e7logo.png);
 }
 
 .w3-red,
@@ -24,7 +27,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     background-position: -250px 0px;
-    background-image: var(--bg-paleBlue);
+    background-image: var(--bg-title);
     padding: 10px;
     height: 100px;
     margin-bottom: 0;
@@ -32,14 +35,14 @@
 }
 .highlight,
 .highlight-hover:hover{
-    color: #fff !important;
-    background-color: var(--color-someBlue)!important;
+    color: var(--color-white) !important;
+    background-color: var(--color-blue)!important;
 }
 
 .container  {
     display: flex;
     padding: 10px;
-    background-color: var(--color-someGrey);
+    background-color: var(--color-border-grey);
     flex-direction: column;
     min-height: 70vh;
     min-width:70vw;
@@ -47,24 +50,47 @@
 }
 #summon-categories{
     display: flex;
-    height: 70vh;
-    flex-direction: row;
-    justify-content: flex-start;
-    background-color: var(--color-paleGrey);
+    height: 100%;
+    background-color: var(--color-body-grey);
 }
 
 .summon-results{
-    background-color: var(--color-paleGrey);
-    padding: 30px;
-    overflow: none;
+    background-color: var(--color-body-grey);
+    padding: 1rem;
+    width: 85%;
 }
+
+.summon-grid{
+    height: calc(100% - 45px);    
+    width: 100%;
+}
+
+.input-panel{
+    justify-content: center;
+    display: flex;
+    height: 45px;
+    width: 100%;
+}
+
+.button{
+    background-color: var(--color-summon-highlight);
+    border: none;
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 8px;
+    width: 170px;
+}
+.button:hover{
+    background-color: var(--color-summon-blue);
+    color: var(--color-white);
+}
+
 
 .sidebar {
     height:70vh;
-    width:150px;
+    width:15%;
     z-index:1;
-    overflow:auto;
-    background-image: var(--bg-paleBlue);
+    background-color: var(--color-light-grey);
 }
 
 

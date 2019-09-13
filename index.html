@@ -16,15 +16,23 @@
                     <h1></h1>
                 </div>
                 <div id="summon-categories">
-                    <div class="sidebar w3-bar-block color-paleB">
-                        <button class="w3-bar-item w3-button tablink banner-item highlight" data-menu="covenant">Covenant</button>
+                    <div class="sidebar w3-bar-block">
+                        <button class="w3-bar-item w3-button tablink about-info highlight" data-menu="about">About</button>
+                        <button class="w3-bar-item w3-button tablink banner-item" data-menu="covenant">Covenant</button>
                         <button class="w3-bar-item w3-button tablink banner-item" data-menu="rate-up">Rate up</button>
                         <button class="w3-bar-item w3-button tablink banner-item" data-menu="mystic">Mystic</button>
                         <button class="w3-bar-item w3-button tablink banner-item" data-menu="moonlight">Moonlight</button>  
-                        <button class="w3-bar-item w3-button tablink about-info" data-menu="about">About</button>
+                        
                     </div>
-                    <div id="summon-grid" class="summon-results menu-hide">
+                    <div id="summon" class="summon-results menu-hide">
+                        <div class="summon-grid">
+
+                        </div>
+                        <div class="input-panel">
+                            <button class="button">summon</button>
+                        </div>
                     </div>
+                    
                     <div id="about" class="summon-results menu-active">
                         <h2>About</h2>
                         <h4>Epic Seven Simulator by Zack</h4>
@@ -35,6 +43,7 @@
             
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
             <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+            <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
             
             <script src="app.js"></script>
         </section>
