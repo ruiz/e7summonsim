@@ -41,7 +41,7 @@
 
 .container  {
     display: flex;
-    padding: 10px;
+    padding: 1rem;
     background-color: var(--color-border-grey);
     flex-direction: column;
     min-height: 70vh;
@@ -61,8 +61,175 @@
 }
 
 .summon-grid{
+    padding: 1rem; 
+    content: "";
+    display: block;
+    clear: both;
     height: calc(100% - 45px) !important;    
     width: 100%;
+}
+
+.load-icon {
+    position: absolute;
+    z-index: 10;
+    opacity: 1;
+    bottom: -5.5rem;
+    left: 3rem;
+    transform: scale(0.3);
+    transition: all .5s ease; 
+}
+
+.summon-load-icon {
+    width: 3rem;
+    height: 3rem;
+}
+
+.summon-card {
+    float: left;
+    position: relative;
+    margin: 0;
+    margin: 0 1rem 1.5rem 0;
+    width: 26rem;
+}
+
+.summon-card-image {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    border-radius: 1rem;
+    border: 0.2rem solid rgb(92, 182, 255);
+}
+
+.summon-card-image:hover .unit-img {
+    transform: scale(1.1);
+}
+
+.summon-card-image:hover {
+    transition: all .25s ease; 
+    border-color: rgb(255, 231, 92);
+    animation: none;
+}
+
+.class-icon {
+    object-fit: contain;
+    height: 2.5rem;
+}
+
+[data-type] .unit-img {
+    position: relative;
+    z-index: 2;
+    transition: all .25s ease;
+}
+
+[data-type="hero"] .unit-img {
+    left: 7.5rem;
+}
+
+.rarity-3 {
+    border: 0.2rem solid rgb(92, 182, 255);
+}
+
+.rarity-4 {
+   border: 0.4rem solid rgb(217, 92, 255); 
+   animation: rarity-4 1s ease-in-out infinite;
+}
+
+@keyframes rarity-4 {
+    0% { border-color: rgb(217, 92, 255); }
+    50% { border-color: rgb(135, 0, 177); }
+    100% { border-color: rgb(217, 92, 255); }
+}
+
+.rarity-5 {
+    border: 0.4rem solid rgb(255, 92, 92);
+    animation: rarity-5 1s ease-in-out infinite;
+}
+
+[class*=star-] {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.star-3 {
+    width: 3.825rem;
+    height: 1.45rem;
+    background-size: 1.5rem 1.45rem;
+    background-image: url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png);
+    background-position-x: 2.325rem,1.2rem,.075rem;
+    background-position-y: 100%;
+}
+
+.star-4 {
+    width: 5.25rem;
+    height: 1.45rem;
+    background-size: 1.5rem 1.45rem;
+    background-image: url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png);
+    background-position-x: 3.75rem,2.625rem,1.5rem,.375rem;
+    background-position-y: 100%;
+}
+
+.star-5 {
+    width: 6rem;
+    height: 1.45rem;
+    background-size: 1.5rem 1.45rem;
+    background-image: url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png),url(https://assets.epicsevendb.com/star/cm_icon_star.png);
+    background-position-x: 4.5rem,3.375rem,2.25rem,1.125rem,0;
+    background-position-y: 100%;
+}
+
+.color-div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.unit-bg { 
+    z-index: 1;
+    background: linear-gradient(to bottom, rgb(31, 65, 126) 0%,rgb(23, 110, 174) 100%);
+}
+
+.unit-overlay {
+    z-index: 5;
+    background: linear-gradient(to bottom, rgba(22,46,90,1) 0%, rgba(16,76,122,1) 100%);
+    opacity: 1;
+}
+
+.unit-loaded {
+    transition: all .5s ease; 
+    opacity: 0;
+}
+
+@keyframes rarity-5 {
+    0% { border-color: rgb(255, 92, 92); }
+    50% { border-color: rgb(177, 0, 0); }
+    100% { border-color: rgb(255, 92, 92); }
+}
+
+.grid-placeholder {
+    height: 23rem;
+}
+
+.grid-placeholder-text {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 2.5%;
+    width: 30rem;
+}
+.grid-placeholder-hide {
+    display: none;
+}
+.load-icon-hide {
+    transform: scale(0);
+}
+
+.element-icon {
+    object-fit: contain; 
+    height: 2rem;  
 }
 
 .input-panel{
@@ -93,6 +260,12 @@
     background-color: var(--color-light-grey);
 }
 
+.name-div {
+    position: absolute;  
+    top: 0.25rem;
+    left: 0.75rem;
+    z-index: 3;
+}
 
 section{
     height: 100vh;
